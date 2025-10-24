@@ -100,7 +100,7 @@ st.dataframe(
     df.style.format("{:.4f}").set_table_styles([
         {'selector': 'thead th', 'props': [('font-size', '16px'), ('text-align', 'center')]},
         {'selector': 'tbody td', 'props': [('font-size', '15px'), ('text-align', 'center')]}
-    ]),use_container_width=True)
+    ]),width=True)
 
 col1, col2 = st.columns(2)
 with col1:
@@ -177,7 +177,7 @@ fig_call.update_layout(
 )
 fig_call.update_yaxes(scaleanchor="x", scaleratio=1)  # ensure square cells
 
-col1.plotly_chart(fig_call, use_container_width=True)
+col1.plotly_chart(fig_call, width=True)
 
 # ---- Interactive PUT Heatmap ----
 fig_put = px.imshow(
@@ -192,4 +192,4 @@ fig_put.update_layout(
 )
 fig_put.update_yaxes(scaleanchor="x", scaleratio=1)  # ensure square cells
 
-col2.plotly_chart(fig_put, use_container_width=True)
+col2.plotly_chart(fig_put, width=True)
