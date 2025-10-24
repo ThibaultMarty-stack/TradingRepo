@@ -89,14 +89,14 @@ for i, vol in enumerate(volatilities):
 
 st.title("Black-Scholes Option Pricer")
 
-df = pd.DataFrame([{
+param_df = pd.DataFrame([{
     "Spot Price": S,
     "Volatility": sigma,
     "Strike": K,
     "Maturity (Years)": T,
     "Risk-Free Rate": r
 }])
-st.dataframe(df.style.format("{:.4f}"),width=True)
+st.dataframe(param_df,width=1200, hide_index=True)
 
 col1, col2 = st.columns(2)
 with col1:
