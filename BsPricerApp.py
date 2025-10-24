@@ -96,11 +96,7 @@ df = pd.DataFrame([{
     "Maturity (Years)": T,
     "Risk-Free Rate": r
 }])
-st.dataframe(
-    df.style.format("{:.4f}").set_table_styles([
-        {'selector': 'thead th', 'props': [('font-size', '16px'), ('text-align', 'center')]},
-        {'selector': 'tbody td', 'props': [('font-size', '15px'), ('text-align', 'center')]}
-    ]),width=True)
+st.dataframe(df.style.format("{:.4f}"),width=True)
 
 col1, col2 = st.columns(2)
 with col1:
